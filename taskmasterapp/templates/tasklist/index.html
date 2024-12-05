@@ -12,23 +12,26 @@
 </head>
 
 <body>
-  <h1>Minha lista de tarefas<span class="dot">.</span></h1>
+  <h1 style= "margin-top: -350px; padding: 50px; font-size: 40px;">Minha lista de tarefas<span class="dot"></span></h1>
   <div>
     <div class="list-box">
 
       <div id="task-input">
 
        
-        <ul>
+        <ul style="display: flex; list-style-type: none; gap: 10px; ">
           {% for task in tasks %}
-          <li>
-            <div class="container">
+          <li class="container {% if task.priority == 'Alta' %}high-priority{% elif task.priority == 'Média' %}medium-priority{% else %}low-priority{% endif %}">
+          
               <strong>{{ task.title }}</strong> - {{ task.due_date }} -
               {{ task.priority }}
-            </div>
+
+              <a href="{% url 'edit_task' task.id %}" class="btn btn-edit">Alterar</a>
+              <a href="{% url 'delete_task' task.id %}" class="btn btn-delete" onclick="return confirm('Tem certeza que deseja remover esta tarefa?');">Remover</a>
+        
           </li>
           {% empty %}
-          <p>Você ainda não possuiu tarefas cadastradas.</p>
+          <p>Você ainda não possuiu tarefas cadastradas.</p>  
           {% endfor %}
 
         </ul>

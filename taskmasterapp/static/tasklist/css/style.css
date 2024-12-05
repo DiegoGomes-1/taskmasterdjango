@@ -33,6 +33,43 @@ body {
     z-index: 1;
 }
 
+.high-priority {
+    /*flex-wrap: wrap;*/
+    width: 100%;
+    max-width: 300px;
+    background: rgb(138, 43, 43);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.medium-priority {
+    
+    width: 100%;
+    max-width: 300px;
+    background: rgb(138, 138, 43);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.low-priority {
+
+    width: 100%;
+    max-width: 300px;
+    background: rgb(43, 138, 94);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+
 /* Cabeçalho */
 header h1 {
     font-size: 2rem;
@@ -55,7 +92,7 @@ header h1 {
 #task-input button {
     width: 100%;
     padding: 1rem;
-    background: #1e1e1e;
+    /*background: #1e1e1e;*/
     border: 2px solid transparent;
     border-radius: 5px;
     color: #fff;

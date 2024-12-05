@@ -40,6 +40,8 @@ header h1 {
     font-weight: bold;
 }
 
+
+
 /* Formulário de entrada de tarefa */
 #task-input {
     display: flex;
